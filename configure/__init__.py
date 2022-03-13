@@ -10,6 +10,9 @@ if os.path.exists(dotenv_path):
 
 
 class BaseConfig:
+    """
+    Base configuration class for other configuration to inherit from.
+    """
     SECRET_KEY = os.environ['SECRET_KEY']
     SQLALCHEMY_ECHO = False
     SQLALCHEMY_TRACK_MODIFICATIONS = False

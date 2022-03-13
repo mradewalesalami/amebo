@@ -9,6 +9,12 @@ login_manager = LoginManager()
 
 
 def create_app(configuration_mode):
+    """
+    The flask application instance
+    :param configuration_mode: configuration mode to load for the flask app
+    :return: the flask app
+    """
+    
     app = Flask(__name__, instance_relative_config=True)
     
     from configure import load_configuration
